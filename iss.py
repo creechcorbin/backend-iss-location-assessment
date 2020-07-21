@@ -70,16 +70,12 @@ def track_pos():
 
     return screen
 
-
-
 def main():
     getData()
     getCoords()
     get_passover_time()
     test = track_pos()
     test.exitonclick()
-
-
 
 if __name__ == '__main__':
     main()
