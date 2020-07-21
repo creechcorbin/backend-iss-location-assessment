@@ -18,7 +18,6 @@ def getData():
         'Number of people on spacecraft: {}'.format(len(response['people']))
         )
     print(result)
-getData()
 
 def getCoords():
     result = []
@@ -28,8 +27,6 @@ def getCoords():
     result.append('Timestamp: {}'.format(response['timestamp']))
     print(result)
     return result
-    
-getCoords()
 
 def get_passover_time():
     location = {'lat': 39.7683333, 'lon': -86.1580556}
@@ -37,8 +34,6 @@ def get_passover_time():
     response = response.json()
     print(response)
     return response
-
-get_passover_time()
 
 def track_pos():
     pass_time = get_passover_time()
@@ -75,11 +70,15 @@ def track_pos():
 
     return screen
 
-test = track_pos()
-test.exitonclick()
+
 
 def main():
-    pass
+    getData()
+    getCoords()
+    get_passover_time()
+    test = track_pos()
+    test.exitonclick()
+
 
 
 if __name__ == '__main__':
